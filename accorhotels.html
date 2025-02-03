@@ -1,0 +1,1183 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description"  content="Employee Engagement Is Power" />
+      <meta name="twitter:card"  content="summary_large_image" />
+      <meta name="twitter:site"  content="@AdobePortfolio" />
+      <meta  property="og:title" content="Matthieu Jeunet - AccorHotels" />
+      <meta  property="og:description" content="Employee Engagement Is Power" />
+      <meta  property="og:image" content="https://cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d35e7a8f-126e-43af-b897-53753f2abc6c_rwc_71x100x1054x594x1054.jpg?h=3cce8031c99fbb5cd9498b9fa43b1920" />
+      <meta name="robots"  content="noindex" />
+        <link rel="icon" href="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/439311ab-9cc2-457f-adb1-9ca7b60da1b3_carw_1x1x32%EF%B9%96h=014857dc4da7a64dd089ad9d37ac78c1.png" />
+      <link rel="stylesheet" href="dist/css/main.css" type="text/css" />
+      <link rel="stylesheet" href="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/cb7aa128c8831240d250e5160ea969df1655977615%EF%B9%96h=b3c907bb513edfb4bc5b639bfe2ac984.css" type="text/css" />
+    <link rel="canonical" href="accorhotels.html" />
+      <title>Matthieu Jeunet - AccorHotels</title>
+    <script type="text/javascript" src="../use.typekit.net/ik/PkupE1uNkJLL4gAIUhmn741qAH0Vy8X3XMSJfUf4rrJfe7C2fHYEBsJzwD9oFDIDWhF8jDJUwDiR5e4qjDBcwAZKjDmq5Q6h52SkjDm8wRMDwhIo5QSUFAI-RbI7OcuyiYsG-Amu-cmuOco8if37OcuoSeNkieZzde8zOcFzdP37O1gkdDJlic88ikolpWgzS1scdhUTdkoRdhXCdABXieyTZWm7ZW90dcmXOeuoSeN_ae1922ed800164ab.js" async onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script>
+</head>
+  <body class="transition-enabled">  <div class='page-background-video page-background-video-with-panel'>
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav data-hover-hint="nav">
+              <ul class="group">
+                  <li class="gallery-title"><a href="selected-work.html" >👋 Selected UX work</a></li>
+            <li class="project-title"><a href="accorhotels.html" class="active">AccorHotels</a></li>
+            <li class="project-title"><a href="engie.html" >Engie</a></li>
+            <li class="project-title"><a href="bnp-x-carrefour.html" >BNPP x Carrefour</a></li>
+            <li class="project-title"><a href="gobelins.html" >Gobelins</a></li>
+            <li class="project-title"><a href="essent.html" >Essent Energy</a></li>
+            <li class="project-title"><a href="orange.html" >Orange</a></li>
+            <li class="project-title"><a href="bpce.html" >BPCE</a></li>
+            <li class="project-title"><a href="lagardere.html" >Lagardère</a></li>
+            <li class="project-title"><a href="hellobank.html" >Hello bank!</a></li>
+            <li class="project-title"><a href="findr.html" >Findr</a></li>
+            <li class="project-title"><a href="oldmutual.html" >Old Mutual</a></li>
+            <li class="project-title"><a href="ucb.html" >UCB Pharma</a></li>
+            <li class="project-title"><a href="groupama.html" >Groupama</a></li>
+              </ul>
+      <div class="page-title">
+        <a href="about.html" >🧔🏼 About</a>
+      </div>
+          </nav>
+    </div>
+  </div>
+  <div class="site-wrap cfix">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <div class="sidebar-content">
+          <header class="site-header">
+              <div class="logo-wrap" data-hover-hint="logo">
+                    <div class="logo e2e-site-logo-text logo-text  ">
+    <a href="" class="preserve-whitespace">Matthieu Jeunet</a>
+
+</div>
+              </div>
+  <div class="hamburger-click-area js-hamburger">
+    <div class="hamburger">
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+  </div>
+          </header>
+              <nav data-hover-hint="nav">
+              <ul class="group">
+                  <li class="gallery-title"><a href="selected-work.html" >👋 Selected UX work</a></li>
+            <li class="project-title"><a href="accorhotels.html" class="active">AccorHotels</a></li>
+            <li class="project-title"><a href="engie.html" >Engie</a></li>
+            <li class="project-title"><a href="bnp-x-carrefour.html" >BNPP x Carrefour</a></li>
+            <li class="project-title"><a href="gobelins.html" >Gobelins</a></li>
+            <li class="project-title"><a href="essent.html" >Essent Energy</a></li>
+            <li class="project-title"><a href="orange.html" >Orange</a></li>
+            <li class="project-title"><a href="bpce.html" >BPCE</a></li>
+            <li class="project-title"><a href="lagardere.html" >Lagardère</a></li>
+            <li class="project-title"><a href="hellobank.html" >Hello bank!</a></li>
+            <li class="project-title"><a href="findr.html" >Findr</a></li>
+            <li class="project-title"><a href="oldmutual.html" >Old Mutual</a></li>
+            <li class="project-title"><a href="ucb.html" >UCB Pharma</a></li>
+            <li class="project-title"><a href="groupama.html" >Groupama</a></li>
+              </ul>
+      <div class="page-title">
+        <a href="about.html" >🧔🏼 About</a>
+      </div>
+              </nav>
+        </div>
+        <main>
+              <div class="masthead" data-context="page.masthead" data-hover-hint="mastheadOptions">
+                <div class="masthead-contents">
+                  <div class="masthead-text js-masthead-text">
+                    <div data-context="page.masthead" data-hover-hint="mastheadTitle"><h1 decorator="inlineTextEditable" contenteditable="false" class="js-inline-text-editable preserve-whitespace main-text rich-text module-text" data-text-keypath="customizations.masthead.title.text" value="AccorHotels">AccorHotels</h1></div>
+                    <div data-context="page.masthead" data-hover-hint="mastheadText"><p decorator="inlineTextEditable" contenteditable="false" class="js-inline-text-editable preserve-whitespace main-text rich-text module-text" data-text-keypath="page.masthead.text.text" value="Employee engagement is power">Employee engagement is power</p></div>
+                    <div class="masthead-buttons">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <div class="page-container js-site-wrap" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5b2acb973e63e8ccabed02e633b5087fea50204320730aa1cccc3" data-hover-hint="pageHeader" data-hover-hint-id="p5b2acb973e63e8ccabed02e633b5087fea50204320730aa1cccc3">
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5b2acb973e63e8ccabed02e633b5087fea50204320730aa1cccc3">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 20px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;" class="sub-title">A tailor-made design approach</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><span style="color:#aaaaaa;" class="texteditor-inline-color">We adapted the <a href="https://www.gv.com/sprint/" target="_blank">design sprint methodology</a> to meet the project context: worldwide presence and different brands positioning of the group, multiple profiles working in hotels and temporal constraints.<br>This approach allowed us to focus our efforts on the most important issues, to quickly make our ideas tangible, put them in the hands of employees, test them and ensure that the imagined concepts meet employees’ expectations in a relevant, useful way.</span></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module" >
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/8f9c5d51-5f39-4f32-9b92-6ca3687f3a5e%EF%B9%96h=e1b6e49d62fa43d56add74246073cd77.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/8f9c5d51-5f39-4f32-9b92-6ca3687f3a5e_rw_1920%EF%B9%96h=a6ff655a739d994c9827e50b1630b55f.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/8f9c5d51-5f39-4f32-9b92-6ca3687f3a5e_rw_600%EF%B9%96h=64095d2045d3a87a6501bbdf97f6b933.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/8f9c5d51-5f39-4f32-9b92-6ca3687f3a5e_rw_1200%EF%B9%96h=e1078cdf68ebf4a62176b1ba0d028d6e.png 1200w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/8f9c5d51-5f39-4f32-9b92-6ca3687f3a5e_rw_1920%EF%B9%96h=a6ff655a739d994c9827e50b1630b55f.png 1346w,"
+             data-sizes="(max-width: 1346px) 100vw, 1346px"
+             width="1346"
+             height="0"
+             style="padding-bottom: 52.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="line-height:20px;text-align:left;" class="texteditor-inline-lineheight">The heart of the project was structured in 3 design sprints. Each sprint was organized in 2 phases of 1 week each.</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 20px;
+padding-bottom: 20px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/55c69bd0-0e3e-40f5-b612-2e2ebb3a7c6e%EF%B9%96h=0ca4484596a990bb733e6fd63bcda709.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/55c69bd0-0e3e-40f5-b612-2e2ebb3a7c6e_rw_1920%EF%B9%96h=2da48d4b28967d32c2d082f5e845039c.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/55c69bd0-0e3e-40f5-b612-2e2ebb3a7c6e_rw_600%EF%B9%96h=87db55305d865deb857454f163763896.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/55c69bd0-0e3e-40f5-b612-2e2ebb3a7c6e_rw_1200%EF%B9%96h=0e213b4ee70b1070de460d79678742c1.png 1200w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/55c69bd0-0e3e-40f5-b612-2e2ebb3a7c6e_rw_1920%EF%B9%96h=2da48d4b28967d32c2d082f5e845039c.png 1438w,"
+             data-sizes="(max-width: 1438px) 100vw, 1438px"
+             width="1438"
+             height="0"
+             style="padding-bottom: 56.17%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left">A preview from the experimentation plan (briefing the AccorHotels team identify the right profiles)</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 20px;
+padding-bottom: 20px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/87dbdec7-6770-4937-a77b-c1f5362611e1%EF%B9%96h=08c0dbfd3b21ffc5d6cdf2d6ef4c8246.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/87dbdec7-6770-4937-a77b-c1f5362611e1_rw_1920%EF%B9%96h=05f40c7949848f00180ca4a08ea37eef.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/87dbdec7-6770-4937-a77b-c1f5362611e1_rw_600%EF%B9%96h=b04e41a7b7971884b5ba50056a23dcd3.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/87dbdec7-6770-4937-a77b-c1f5362611e1_rw_1200%EF%B9%96h=540b026578b328e5dc46d90fc55ca0a3.png 1200w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/87dbdec7-6770-4937-a77b-c1f5362611e1_rw_1920%EF%B9%96h=05f40c7949848f00180ca4a08ea37eef.png 1279w,"
+             data-sizes="(max-width: 1279px) 100vw, 1279px"
+             width="1279"
+             height="0"
+             style="padding-bottom: 56.17%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left"><span style="color:#888888" class="texteditor-inline-color">On the left: Monday, doing research (interview + cards sorting) with the hotel staff (here in Singapore). On the right: Friday, testing the "adoption" of our concepts with&nbsp;different profiles </span></div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 20px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;" class="sub-title">Concepts</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div><span style="color:#aaaaaa;" class="texteditor-inline-color">In Singapore, we imagined a service of micro-learning by giving employees the opportunity to create and share short video tutorials. </span></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 0px;
+padding-bottom: 25px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d72f2b98-fc38-415b-ac58-43086399bb07%EF%B9%96h=b2dfb19b73c50338e04c9b7068228aa4.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d72f2b98-fc38-415b-ac58-43086399bb07_rw_1920%EF%B9%96h=42a2a3a674e74444f934e5af3e7a2e3b.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d72f2b98-fc38-415b-ac58-43086399bb07_rw_600%EF%B9%96h=8e228cb9b7e18771770ba7f25665dba2.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d72f2b98-fc38-415b-ac58-43086399bb07_rw_1200%EF%B9%96h=b39e0959419dd60d4215e961f4f977b7.png 1200w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d72f2b98-fc38-415b-ac58-43086399bb07_rw_1920%EF%B9%96h=42a2a3a674e74444f934e5af3e7a2e3b.png 1274w,"
+             data-sizes="(max-width: 1274px) 100vw, 1274px"
+             width="1274"
+             height="0"
+             style="padding-bottom: 56.33%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left;">3 concepts were imagined during the second day. Only one was selected by the client and prototyped for testing adoption on Friday</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5dd530e8c90eaf527f63ae1aba85a2914eaca7c8d4900ba7c151d"  style="padding-top: 0px;
+padding-bottom: 25px;
+  width: 100%;
+">
+  <div class="grid--main js-grid-main" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="146.17691154423" style="width:146.17691154423px; flex-grow:146.17691154423;" data-width="1125" data-height="2001">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/169e1a6b-0c45-4a8e-b342-38bbb6047480_rw_1200%EF%B9%96h=f7e6d50f7a03deabd901b035501f30b2.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/169e1a6b-0c45-4a8e-b342-38bbb6047480_rw_600%EF%B9%96h=62c05b929a37c84fa17cea4c081ec401.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/169e1a6b-0c45-4a8e-b342-38bbb6047480_rw_1200%EF%B9%96h=f7e6d50f7a03deabd901b035501f30b2.png 1125w,"  sizes="(max-width: 1125px) 100vw, 1125px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/169e1a6b-0c45-4a8e-b342-38bbb6047480_rw_1200%EF%B9%96h=f7e6d50f7a03deabd901b035501f30b2.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/169e1a6b-0c45-4a8e-b342-38bbb6047480_rw_600%EF%B9%96h=62c05b929a37c84fa17cea4c081ec401.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/169e1a6b-0c45-4a8e-b342-38bbb6047480_rw_1200%EF%B9%96h=f7e6d50f7a03deabd901b035501f30b2.png 1125w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:177.86666666667%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="146.42313546423" style="width:146.42313546423px; flex-grow:146.42313546423;" data-width="370" data-height="657">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d63f0ab1-a4e8-4516-bd6b-309fdfeb8d9c_rw_600%EF%B9%96h=5848541e05d0d176726b7e47ca082822.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d63f0ab1-a4e8-4516-bd6b-309fdfeb8d9c_rw_600%EF%B9%96h=5848541e05d0d176726b7e47ca082822.png 370w,"  sizes="(max-width: 370px) 100vw, 370px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d63f0ab1-a4e8-4516-bd6b-309fdfeb8d9c_rw_600%EF%B9%96h=5848541e05d0d176726b7e47ca082822.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d63f0ab1-a4e8-4516-bd6b-309fdfeb8d9c_rw_600%EF%B9%96h=5848541e05d0d176726b7e47ca082822.png 370w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:177.56756756757%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="146.42313546423" style="width:146.42313546423px; flex-grow:146.42313546423;" data-width="370" data-height="657">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b872118c-3ea4-4bf8-8bff-27c7d247c7b6_rw_600%EF%B9%96h=53ffcc781c4fc42b098baabcd3c7edf3.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b872118c-3ea4-4bf8-8bff-27c7d247c7b6_rw_600%EF%B9%96h=53ffcc781c4fc42b098baabcd3c7edf3.png 370w,"  sizes="(max-width: 370px) 100vw, 370px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b872118c-3ea4-4bf8-8bff-27c7d247c7b6_rw_600%EF%B9%96h=53ffcc781c4fc42b098baabcd3c7edf3.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b872118c-3ea4-4bf8-8bff-27c7d247c7b6_rw_600%EF%B9%96h=53ffcc781c4fc42b098baabcd3c7edf3.png 370w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:177.56756756757%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              <div class="project-module module video project-module-video js-js-project-module" style="padding-top: 0px;
+padding-bottom: 0px;
+">
+    <div class="embed-dimensions" style="max-width: 1280px; max-height: 720px; margin: 0 auto;">
+    <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
+        <iframe title="Lecteur vid&eacute;o" class="embed-content" src="https://www-ccv.adobe.io/v1/player/ccv/MGCfiDeGj_L/embed?bgcolor=%23191919&amp;lazyLoading=true&amp;api_key=BehancePro2View" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    </div>
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left">Short video tutorials from your colleagues (Singapore)</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 20px;
+padding-bottom: 20px;
+  width: 95%;
+  float: left;
+  clear: both;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/41c5f5e9-3d9d-40d8-968e-0ee795e58a81%EF%B9%96h=14112c78dfcd6fef9a9216abfe34283a.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/41c5f5e9-3d9d-40d8-968e-0ee795e58a81_rw_1200%EF%B9%96h=7c0495eb01c6460be31d73898d767ce3.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/41c5f5e9-3d9d-40d8-968e-0ee795e58a81_rw_600%EF%B9%96h=469bd8242f37e521865ab9045b72fcf3.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/41c5f5e9-3d9d-40d8-968e-0ee795e58a81_rw_1200%EF%B9%96h=7c0495eb01c6460be31d73898d767ce3.png 670w,"
+             data-sizes="(max-width: 670px) 100vw, 670px"
+             width="670"
+             height="0"
+             style="padding-bottom: 76.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left;">Recording Friday testing. In that project, we tested the "adoption" (rather than the usability) using a "think aloud approach"</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module video project-module-video js-js-project-module">
+    <div class="embed-dimensions" style="max-width: 1280px; max-height: 720px; margin: 0 auto;">
+    <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
+        <iframe title="Lecteur vid&eacute;o" class="embed-content" src="https://www-ccv.adobe.io/v1/player/ccv/QN7bK9XXXQF/embed?bgcolor=%23191919&amp;lazyLoading=true&amp;api_key=BehancePro2View" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    </div>
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 40px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div><span style="color:#aaaaaa;" class="texteditor-inline-color">In London, we rethought the annual performance meeting by replacing it through structured rituals that happen every 3 months.  </span><br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5dd531eedc59f4b02e25256c13833a31bb19559ce5f905794e54a"  style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="grid--main js-grid-main" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="146.3963963964" style="width:146.3963963964px; flex-grow:146.3963963964;" data-width="1125" data-height="1998">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3224e255-c931-43c9-a1a0-e4712ddcaea0_rw_1200%EF%B9%96h=f3ce1f83d5fb46404bdc749df48ca2e6.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3224e255-c931-43c9-a1a0-e4712ddcaea0_rw_600%EF%B9%96h=0256910c1c4015378add662d72976544.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3224e255-c931-43c9-a1a0-e4712ddcaea0_rw_1200%EF%B9%96h=f3ce1f83d5fb46404bdc749df48ca2e6.png 1125w,"  sizes="(max-width: 1125px) 100vw, 1125px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3224e255-c931-43c9-a1a0-e4712ddcaea0_rw_1200%EF%B9%96h=f3ce1f83d5fb46404bdc749df48ca2e6.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3224e255-c931-43c9-a1a0-e4712ddcaea0_rw_600%EF%B9%96h=0256910c1c4015378add662d72976544.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3224e255-c931-43c9-a1a0-e4712ddcaea0_rw_1200%EF%B9%96h=f3ce1f83d5fb46404bdc749df48ca2e6.png 1125w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:177.6%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="129.48207171315" style="width:129.48207171315px; flex-grow:129.48207171315;" data-width="1125" data-height="2259">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2f126bd4-687f-4642-a6c4-65e22ea219bd_rw_1200%EF%B9%96h=eb45422017c3e5ba92630156ac3bed11.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2f126bd4-687f-4642-a6c4-65e22ea219bd_rw_600%EF%B9%96h=2a0de4a2bc2a634abfeb17ec73541f74.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2f126bd4-687f-4642-a6c4-65e22ea219bd_rw_1200%EF%B9%96h=eb45422017c3e5ba92630156ac3bed11.png 1125w,"  sizes="(max-width: 1125px) 100vw, 1125px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2f126bd4-687f-4642-a6c4-65e22ea219bd_rw_1200%EF%B9%96h=eb45422017c3e5ba92630156ac3bed11.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2f126bd4-687f-4642-a6c4-65e22ea219bd_rw_600%EF%B9%96h=2a0de4a2bc2a634abfeb17ec73541f74.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2f126bd4-687f-4642-a6c4-65e22ea219bd_rw_1200%EF%B9%96h=eb45422017c3e5ba92630156ac3bed11.png 1125w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:200.8%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="146.17691154423" style="width:146.17691154423px; flex-grow:146.17691154423;" data-width="1125" data-height="2001">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f7b58a2f-f666-4769-ac56-35466254e377_rw_1200%EF%B9%96h=cd1e22557a05d0f775c0e1cb51ffd5ec.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f7b58a2f-f666-4769-ac56-35466254e377_rw_600%EF%B9%96h=3b2b9edfe3c91405e47046d58a9f7476.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f7b58a2f-f666-4769-ac56-35466254e377_rw_1200%EF%B9%96h=cd1e22557a05d0f775c0e1cb51ffd5ec.png 1125w,"  sizes="(max-width: 1125px) 100vw, 1125px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f7b58a2f-f666-4769-ac56-35466254e377_rw_1200%EF%B9%96h=cd1e22557a05d0f775c0e1cb51ffd5ec.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f7b58a2f-f666-4769-ac56-35466254e377_rw_600%EF%B9%96h=3b2b9edfe3c91405e47046d58a9f7476.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f7b58a2f-f666-4769-ac56-35466254e377_rw_1200%EF%B9%96h=cd1e22557a05d0f775c0e1cb51ffd5ec.png 1125w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:177.86666666667%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              <div class="project-module module video project-module-video js-js-project-module" style="padding-top: 5px;
+padding-bottom: 0px;
+">
+    <div class="embed-dimensions" style="max-width: 1280px; max-height: 720px; margin: 0 auto;">
+    <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
+        <iframe title="Lecteur vid&eacute;o" class="embed-content" src="https://www-ccv.adobe.io/v1/player/ccv/Kp6ohGCqMej/embed?bgcolor=%23191919&amp;lazyLoading=true&amp;api_key=BehancePro2View" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    </div>
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left;">Frequent and structured meeting rituals (London)</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 40px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div><span style="color:#aaaaaa;" class="texteditor-inline-color">In Sao Paulo, we addressed the recognition need by making positive feedback and moments between guests and employees easier.</span><br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5dd53284068ce17a97f53803a55a235ae3ba23d549db82d638eb0"  style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="grid--main js-grid-main" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="120.96774193548" style="width:120.96774193548px; flex-grow:120.96774193548;" data-width="750" data-height="1612">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/64716ad5-3e8b-4c31-ba67-1c2c7c8ddb4e_rw_1200%EF%B9%96h=756757bf4adbe4f9c3c205d117dab066.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/64716ad5-3e8b-4c31-ba67-1c2c7c8ddb4e_rw_600%EF%B9%96h=b55f06192f28feadfc8ea3e287bf32b6.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/64716ad5-3e8b-4c31-ba67-1c2c7c8ddb4e_rw_1200%EF%B9%96h=756757bf4adbe4f9c3c205d117dab066.png 750w,"  sizes="(max-width: 750px) 100vw, 750px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/64716ad5-3e8b-4c31-ba67-1c2c7c8ddb4e_rw_1200%EF%B9%96h=756757bf4adbe4f9c3c205d117dab066.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/64716ad5-3e8b-4c31-ba67-1c2c7c8ddb4e_rw_600%EF%B9%96h=b55f06192f28feadfc8ea3e287bf32b6.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/64716ad5-3e8b-4c31-ba67-1c2c7c8ddb4e_rw_1200%EF%B9%96h=756757bf4adbe4f9c3c205d117dab066.png 750w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:214.93333333333%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="146.17691154423" style="width:146.17691154423px; flex-grow:146.17691154423;" data-width="750" data-height="1334">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/5eabd29f-a2be-4b73-8f81-b9da9fece6fc_rw_1200%EF%B9%96h=e3628e940a2d624973adac2b0cf8204a.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/5eabd29f-a2be-4b73-8f81-b9da9fece6fc_rw_600%EF%B9%96h=855770b9ab32aac50c9888b6a987e110.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/5eabd29f-a2be-4b73-8f81-b9da9fece6fc_rw_1200%EF%B9%96h=e3628e940a2d624973adac2b0cf8204a.png 750w,"  sizes="(max-width: 750px) 100vw, 750px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/5eabd29f-a2be-4b73-8f81-b9da9fece6fc_rw_1200%EF%B9%96h=e3628e940a2d624973adac2b0cf8204a.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/5eabd29f-a2be-4b73-8f81-b9da9fece6fc_rw_600%EF%B9%96h=855770b9ab32aac50c9888b6a987e110.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/5eabd29f-a2be-4b73-8f81-b9da9fece6fc_rw_1200%EF%B9%96h=e3628e940a2d624973adac2b0cf8204a.png 750w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:177.86666666667%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="112.06896551724" style="width:112.06896551724px; flex-grow:112.06896551724;" data-width="750" data-height="1740">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/064bc5a8-6b2f-411e-962f-863e40f834f8_rw_1200%EF%B9%96h=57d7f0fc0e197d75ea54702149831b36.png" srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/064bc5a8-6b2f-411e-962f-863e40f834f8_rw_600%EF%B9%96h=5009304753ecbc05a9dbaa5df6a40a06.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/064bc5a8-6b2f-411e-962f-863e40f834f8_rw_1200%EF%B9%96h=57d7f0fc0e197d75ea54702149831b36.png 750w,"  sizes="(max-width: 750px) 100vw, 750px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/064bc5a8-6b2f-411e-962f-863e40f834f8_rw_1200%EF%B9%96h=57d7f0fc0e197d75ea54702149831b36.png"
+        data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/064bc5a8-6b2f-411e-962f-863e40f834f8_rw_600%EF%B9%96h=5009304753ecbc05a9dbaa5df6a40a06.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/064bc5a8-6b2f-411e-962f-863e40f834f8_rw_1200%EF%B9%96h=57d7f0fc0e197d75ea54702149831b36.png 750w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:232%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              <div class="project-module module video project-module-video js-js-project-module" style="padding-top: 5px;
+padding-bottom: 20px;
+">
+    <div class="embed-dimensions" style="max-width: 1280px; max-height: 720px; margin: 0 auto;">
+    <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
+        <iframe title="Lecteur vid&eacute;o" class="embed-content" src="https://www-ccv.adobe.io/v1/player/ccv/NStQJyy2ZDI/embed?bgcolor=%23191919&amp;lazyLoading=true&amp;api_key=BehancePro2View" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    </div>
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left;">Moments with the guests and positive feedback (Sao Paulo)</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title" style="text-align:left;">Engage hotels owners with our findings</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div>Delivering our prototypes and findings in an engaging way: using QR code to "augment" the content with interactive elements such as video or clickable prototypes. We used a paper medium as, during our research, we realised that hotels owners used to read hotel industry updates generally in newspapers. The 2 thumbnails (you can click to enlarge) tell our insights from research in the form of "field report". </div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree" >
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 1069000000">
+        
+        <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 0px;
+padding-bottom: 0px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/9c322317-4e2a-4ee9-80c4-664a01650fdc%EF%B9%96h=49b95152add307f2494df0e0b5f70854.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/9c322317-4e2a-4ee9-80c4-664a01650fdc_rw_1200%EF%B9%96h=e5101ceae3a0cc6c2d48c971283933a0.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/9c322317-4e2a-4ee9-80c4-664a01650fdc_rw_600%EF%B9%96h=fb9ee8780e08ef7f69b3471af3f26d8c.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/9c322317-4e2a-4ee9-80c4-664a01650fdc_rw_1200%EF%B9%96h=e5101ceae3a0cc6c2d48c971283933a0.png 1069w,"
+             data-sizes="(max-width: 1069px) 100vw, 1069px"
+             width="1069"
+             height="0"
+             style="padding-bottom: 74.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 1068000000">
+        
+        <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 0px;
+padding-bottom: 10px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3ce4616b-f17a-48c1-9995-6a43d022c3eb%EF%B9%96h=cc7944ddda7b8d755e70ea7cc470361c.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3ce4616b-f17a-48c1-9995-6a43d022c3eb_rw_1200%EF%B9%96h=0e914217c4bb907576fdb792e67a259c.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3ce4616b-f17a-48c1-9995-6a43d022c3eb_rw_600%EF%B9%96h=a9182388ea5b48cc2ae4263b3fc08510.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/3ce4616b-f17a-48c1-9995-6a43d022c3eb_rw_1200%EF%B9%96h=0e914217c4bb907576fdb792e67a259c.png 1068w,"
+             data-sizes="(max-width: 1068px) 100vw, 1068px"
+             width="1068"
+             height="0"
+             style="padding-bottom: 74.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: 0px;
+padding-bottom: 20px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/248b73c8-ef77-41a5-aa34-082d11b70a58%EF%B9%96h=3e5485795bf54295a26963c551b5b4ba.png">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/248b73c8-ef77-41a5-aa34-082d11b70a58_rw_1200%EF%B9%96h=78d7045e1a7eaf007524b143596eaa60.png"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/248b73c8-ef77-41a5-aa34-082d11b70a58_rw_600%EF%B9%96h=4a0e26d86242022da8f2fc431c0a3c35.png 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/248b73c8-ef77-41a5-aa34-082d11b70a58_rw_1200%EF%B9%96h=78d7045e1a7eaf007524b143596eaa60.png 1068w,"
+             data-sizes="(max-width: 1068px) 100vw, 1068px"
+             width="1068"
+             height="0"
+             style="padding-bottom: 74.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><div style="text-align:left;">Providing interaction guidelines to handoff the prototype to a third partner for this project: OCTO Technology</div></div>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 20px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title" style="text-align:left;"><span class="texteditor-inline-fontsize" style="font-size:24px;"><span style="font-family:bbkk;font-weight:700;">Toward an employee brand</span></span></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 0px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div><span class="texteditor-inline-color" style="color:#aaaaaa;">In seeking to understand how employees would use these concepts, we also discovered 7 engagement territories that outline the scope of a new employer brand. An employer brand that will be well known for its ability to provide an attractive work environment for its people and consequently has a positive impact on turnover rate as well as on guest experience.</span></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module" >
+
+  
+
+  
+     <div class="js-lightbox" data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/1d34650c-9d7c-4b07-9d33-52b72ec4468b%EF%B9%96h=7acceeb03808b1d499df05ce82278750.jpg">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/1d34650c-9d7c-4b07-9d33-52b72ec4468b_rw_3840%EF%B9%96h=59c8b5a47d9258b9a5d6e187b2e983a3.jpg"
+             data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/1d34650c-9d7c-4b07-9d33-52b72ec4468b_rw_600%EF%B9%96h=4740caf6e525553866a13789eea96d09.jpg 600w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/1d34650c-9d7c-4b07-9d33-52b72ec4468b_rw_1200%EF%B9%96h=9cb412029eb8cef33095ff31f3d54e45.jpg 1200w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/1d34650c-9d7c-4b07-9d33-52b72ec4468b_rw_1920%EF%B9%96h=72059c9e61846ab6e7ab922ad2607db8.jpg 1920w,../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/1d34650c-9d7c-4b07-9d33-52b72ec4468b_rw_3840%EF%B9%96h=59c8b5a47d9258b9a5d6e187b2e983a3.jpg 3840w,"
+             data-sizes="(max-width: 3840px) 100vw, 3840px"
+             width="3840"
+             height="0"
+             style="padding-bottom: 66.67%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">You may also like</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space" href="findr.html" data-context="pages" data-identity="id:p5e1c981f49a1f81103ffd4379c95759afcea1ab7629842a51e6de" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x32%EF%B9%96h=11d8da3d116db4ecd86899625063eae4.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x2180%EF%B9%96h=6a75781d8bec37ed4b349629b3504b07.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x640%EF%B9%96h=8664704037b11f939cc02ac04f325896.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x1280%EF%B9%96h=8aae33565990cdfdd5995e63a9a5e0e5.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x1366%EF%B9%96h=cb64f43df8755032d3e6ce612ad0e18a.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x1920%EF%B9%96h=6440ca7ef1bf55e658c24b7d69c77c0d.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x2180%EF%B9%96h=6a75781d8bec37ed4b349629b3504b07.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/d621c17c-c95d-49bf-9164-6d97bf156bc5_rwc_0x109x2180x1228x2180%EF%B9%96h=6a75781d8bec37ed4b349629b3504b07.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Findr</div>
+                              <div class="description">Get Back to Your Lost Items</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="essent.html" data-context="pages" data-identity="id:p57d3f39e8e3a844fb5d2c000da0484b07f09063ede5cce0733a55" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x32%EF%B9%96h=c2cecb44092fecc5a7d2aa2033528986.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x1639%EF%B9%96h=7b368c5db98d094a7f226a1af5823807.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x640%EF%B9%96h=e1105c41135e83a595c0538185dc8ef5.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x1280%EF%B9%96h=131add801cf4e3a1f87d283ac427efba.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x1366%EF%B9%96h=acaa07168b85bfe47c4f77e0e02a8a45.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x1639%EF%B9%96h=7b368c5db98d094a7f226a1af5823807.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x1639%EF%B9%96h=7b368c5db98d094a7f226a1af5823807.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/2b52b60e-82fd-49f4-b3c7-6308b1aec42d_rwc_0x149x1639x923x1639%EF%B9%96h=7b368c5db98d094a7f226a1af5823807.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Essent Energy</div>
+                              <div class="description">Zero UI House Moving Experience</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="bnp-x-carrefour.html" data-context="pages" data-identity="id:p57dd39767c8249482c4577e249277c760ae1ee84e26b5bdf7b4dc" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x32%EF%B9%96h=d392b2c6c55a3204ad30d898eb58e1fa.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x1024%EF%B9%96h=20b5c220501b4cfc1e003616a968731d.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x640%EF%B9%96h=d67526b84a55d24e6cdc1a761607f0e2.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x1024%EF%B9%96h=20b5c220501b4cfc1e003616a968731d.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x1024%EF%B9%96h=20b5c220501b4cfc1e003616a968731d.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x1024%EF%B9%96h=20b5c220501b4cfc1e003616a968731d.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x1024%EF%B9%96h=20b5c220501b4cfc1e003616a968731d.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/a40c055c-7e03-4c71-963c-b9f36002c7e7_rwc_0x23x1024x577x1024%EF%B9%96h=20b5c220501b4cfc1e003616a968731d.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">BNPP x Carrefour</div>
+                              <div class="description">Mobile Wallet Value Proposition</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="groupama.html" data-context="pages" data-identity="id:p57de865e38fbe61b6f9c7a62c33d7e5508373129015d5b1212a39" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x32%EF%B9%96h=cbd35bba23e7608331aad75832784a66.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x1024%EF%B9%96h=77ed0eaf0db5f31893ae66e5cdb82f48.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x640%EF%B9%96h=640ad86ceded623f57a6e1d80b1bc6f0.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x1024%EF%B9%96h=77ed0eaf0db5f31893ae66e5cdb82f48.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x1024%EF%B9%96h=77ed0eaf0db5f31893ae66e5cdb82f48.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x1024%EF%B9%96h=77ed0eaf0db5f31893ae66e5cdb82f48.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x1024%EF%B9%96h=77ed0eaf0db5f31893ae66e5cdb82f48.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0d1d3b49-9924-498a-bd0f-5b24c70c2ffb_rwc_0x5x1024x577x1024%EF%B9%96h=77ed0eaf0db5f31893ae66e5cdb82f48.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Groupama</div>
+                              <div class="description">Data Capture Made Simple</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="oldmutual.html" data-context="pages" data-identity="id:p57dd669f3c3c16e88f69a9ffa6c0bc8fb5f3d0a57cd3b35df4120" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x32%EF%B9%96h=90dbc9934cdd13b87461a22ba07ed7bf.png"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x1920%EF%B9%96h=c6355595124d730b9602612d337eecc5.png"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x640%EF%B9%96h=b7d31bf3f708fc79a2e064e9e92835b1.png 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x1280%EF%B9%96h=ccc6ce688dc97fd97b26cc5da6994173.png 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x1366%EF%B9%96h=78fdb2d9500f90dae2d64f75278aacb3.png 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x1920%EF%B9%96h=c6355595124d730b9602612d337eecc5.png 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x1920%EF%B9%96h=c6355595124d730b9602612d337eecc5.png 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/def1cd94-0fb5-43b6-b61f-0a86465f45c0_rwc_0x29x1920x1082x1920%EF%B9%96h=c6355595124d730b9602612d337eecc5.png 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Old Mutual</div>
+                              <div class="description">Towards a Better Retirement System</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="bpce.html" data-context="pages" data-identity="id:p5dd28ce3eb8e3a441c4a44c60cd5cde30f72fc61ec23b15ce90f2" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x32%EF%B9%96h=83fef94c58457698d66c08f8fbf8f711.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x3305%EF%B9%96h=e5aedffa32d47f4430adb593c6e07909.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x640%EF%B9%96h=e5425a70fd142826709be956cddb062f.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x1280%EF%B9%96h=795e77d748a94b20efd20ae3c41a60bb.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x1366%EF%B9%96h=224443b5d5f2e090ca46fe69c43e3e22.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x1920%EF%B9%96h=e20469b8224c935c992c9772920f34dc.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x2560%EF%B9%96h=e0ae63b28f037350e9d83e7e9e2658d9.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/b75f7599-59fa-4ea3-a40c-5cbfbb68fd0e_rwc_0x168x3305x1863x3305%EF%B9%96h=e5aedffa32d47f4430adb593c6e07909.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">BPCE</div>
+                              <div class="description">Personal Finance Management</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="engie.html" data-context="pages" data-identity="id:p5dd3b075e13b6ad754c7dd85afb5e68b9cde6af4ebdf554bac151" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x32%EF%B9%96h=39175bccf0dc12d68adc72dffb65a4a4.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x659%EF%B9%96h=05a1238e87e1877b9c4f9d5e8271c83c.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x640%EF%B9%96h=01775d86e110a1d5be9d9d235b26539d.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x659%EF%B9%96h=05a1238e87e1877b9c4f9d5e8271c83c.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x659%EF%B9%96h=05a1238e87e1877b9c4f9d5e8271c83c.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x659%EF%B9%96h=05a1238e87e1877b9c4f9d5e8271c83c.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x659%EF%B9%96h=05a1238e87e1877b9c4f9d5e8271c83c.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/0a754d58-da73-4e58-ab2d-9896c1612b62_rwc_0x59x659x371x659%EF%B9%96h=05a1238e87e1877b9c4f9d5e8271c83c.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Engie</div>
+                              <div class="description">Rethink the Billing Experience for SMEs</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="orange.html" data-context="pages" data-identity="id:p57daf3c0bf0d2daed98e401220b2e39e885642c2dbc6db33b7818" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x32%EF%B9%96h=6c2f1019dd53733094f800b53eef8a34.jpeg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x800%EF%B9%96h=9b85790deed50d9288f0b0f373b0b681.jpeg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x640%EF%B9%96h=3ffad3eb5d58d0c6dedf0feee4cd7d52.jpeg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x800%EF%B9%96h=9b85790deed50d9288f0b0f373b0b681.jpeg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x800%EF%B9%96h=9b85790deed50d9288f0b0f373b0b681.jpeg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x800%EF%B9%96h=9b85790deed50d9288f0b0f373b0b681.jpeg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x800%EF%B9%96h=9b85790deed50d9288f0b0f373b0b681.jpeg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/379092bd-c059-4be9-a2ab-bec3e2270001_rwc_0x42x800x451x800%EF%B9%96h=9b85790deed50d9288f0b0f373b0b681.jpeg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Orange</div>
+                              <div class="description">Simplify Store Managers' Daily Routine</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="lagardere.html" data-context="pages" data-identity="id:p5e60d77c43975ace3212521e7c4b952498ce3b09fbd3aeac7f8af" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x32%EF%B9%96h=794c5234a9ef7ef62800743f9b44e239.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x1076%EF%B9%96h=95a77995736525068cedb25e4d20efd9.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x640%EF%B9%96h=789381591b64eb1776615c3364329122.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x1076%EF%B9%96h=95a77995736525068cedb25e4d20efd9.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x1076%EF%B9%96h=95a77995736525068cedb25e4d20efd9.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x1076%EF%B9%96h=95a77995736525068cedb25e4d20efd9.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x1076%EF%B9%96h=95a77995736525068cedb25e4d20efd9.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/f394a6ba-819c-49b2-994b-c996cf056d18_rwc_0x102x1076x606x1076%EF%B9%96h=95a77995736525068cedb25e4d20efd9.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Lagardère</div>
+                              <div class="description">Train Employees to User Centricity</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="gobelins.html" data-context="pages" data-identity="id:p5e56b6b0825ce7df3cb6907fe667e9aa48a340e96d05f01c447e8" >
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x32%EF%B9%96h=c2abd4708d4c9fea7ba2659ba6e14347.jpg"
+              data-src="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x1599%EF%B9%96h=d6c480f003a39041d3dd7bddd309619f.jpg"
+              data-srcset="../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x640%EF%B9%96h=5c9cf1f86a3952be3d65395e433bc6d3.jpg 640w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x1280%EF%B9%96h=ca64098697ea94c5af868cb0ad90bea3.jpg 1280w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x1366%EF%B9%96h=a9487897b4ff6e0ea42d38ffef5e6bbc.jpg 1366w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x1599%EF%B9%96h=d6c480f003a39041d3dd7bddd309619f.jpg 1920w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x1599%EF%B9%96h=d6c480f003a39041d3dd7bddd309619f.jpg 2560w, ../cdn.myportfolio.com/a7b74abf572914d8dd1dadbeb4bc1528/7da1cd63-4152-4301-9fd8-2b0d835692cc_rwc_0x145x1599x901x1599%EF%B9%96h=d6c480f003a39041d3dd7bddd309619f.jpg 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1800px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Gobelins</div>
+                              <div class="description">Teaching Collaborative Workshops</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">&uarr;</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"/>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":20,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5b2acb973e63e8ccabed02e633b5087fea50204320730aa1cccc3","theme":{"name":"jackie\/rose"},"pageTransition":true,"linkTransition":true,"disableDownload":true,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":false},"cookie_banner":{"enabled":false}};</script>
+  <script type="text/javascript" src="site/translations%EF%B9%96cb=3542f9ec304c2dc19fc7fd80dd515314aade8328.js"></script>
+  <script type="text/javascript" src="dist/js/main%EF%B9%96cb=3542f9ec304c2dc19fc7fd80dd515314aade8328.js"></script>
+</html>
